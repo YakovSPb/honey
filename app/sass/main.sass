@@ -1,0 +1,105 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+textarea:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+input:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+
+html
+	-ms-overflow-style: none
+	scrollbar-width: none
+	&::-webkit-scrollbar
+		width: 0
+	&::-webkit-scrollbar
+		width: 0
+
+
+html
+  overflow: scroll
+  overflow-x: hidden
+::-webkit-scrollbar
+  width: 0px
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Rubik', sans-serif
+	overflow-x: hidden
+	color: $text
+	background: url('../img/@2x/bg.png')
+
+a
+	color: #bf8116
+	text-decoration: none
+	font-weight: 500
+
+.btn
+	background-color: $green	
+	border: 5px solid $green
+	display: inline-block
+	font-size: 20px
+	text-decoration: none
+	color: #fff
+	font-weight: 500
+	height: 50px
+	max-width: 270px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all .3s ease
+	&:hover
+		color: $green
+		text-decoration: none
+		border-color: $green
+		background: #fff
+
+.container
+	max-width: 1170px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.main
+	width: 100%
+	max-width: 1250px
+	background: #fff
+	margin: 0 auto
+
+// HEAD
