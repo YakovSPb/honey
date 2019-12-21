@@ -52,16 +52,39 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.4
 	font-family: 'Rubik', sans-serif
 	overflow-x: hidden
 	color: $text
 	background: url('../img/@2x/bg.png')
 
+p
+	margin-bottom: 10px
+
 a
 	color: #bf8116
 	text-decoration: none
 	font-weight: 500
+
+h1, .h1
+	font-weight: 500
+	font-size: 36px
+	line-height: 36px
+	margin-bottom: 20px
+	+media-breakpoint-down(md)
+		font-size: 28px
+		line-height: 30px
+		margin-bottom: 10px
+
+h2, .h2
+	font-weight: 500
+	font-size: 30px
+	line-height: 30px
+	margin: 10px 0 10px
+	+media-breakpoint-down(md)
+		font-size: 26px
+		line-height: 28px
+
 
 .btn
 	background-color: $green	
@@ -92,7 +115,7 @@ a
 		left: auto
 		right: auto
 
-.img-responsive
+.img-r
 	display: block
 	max-width: 100%
 	height: auto
@@ -102,16 +125,28 @@ a
 	max-width: 1250px
 	background: #fff
 	margin: 0 auto
+.wrap
+	display: flex
+.content
+	margin: 25px 40px 0 0
+	+media-breakpoint-down(lg)
+		margin: 10px 15px 0 15px
+
 
 // HEAD
 .header
 	background: $accent
+	position: relative
 	&__line
 		background: $accent
 		height: 40px
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			height: auto
+			padding-bottom: 10px
 	&__search
 		display: flex
 		align-items: center
@@ -120,6 +155,12 @@ a
 		background: #fff
 		padding-left: 20px
 		font-style: italic
+		+media-breakpoint-down(lg)
+			margin-left: 20px
+		+media-breakpoint-down(sm)
+			background: $accent
+			input
+				background: $accent
 		input
 			margin-left: 16px
 			border: 0
@@ -129,16 +170,30 @@ a
 		align-items: center
 		justify-content: space-between
 		margin-right: 28px
+		+media-breakpoint-down(md)
+			width: 283px
+		+media-breakpoint-down(sm)
+			margin-right: 0
+			margin-top: 10px
 		p
 			margin-bottom: 0
 		img
 			display: block
 			padding-bottom: 2px
+	&__flag
+		display: none
+		+media-breakpoint-down(md)
+			display: block
 	&__info
 		height: 124px
 		border-top: 2px solid $text
 		border-bottom: 2px solid $text
 		background: #fff
+		+media-breakpoint-down(md)
+			height: auto
+			padding: 30px 0
+		+media-breakpoint-down(sm)
+			padding: 15px 0
 		.container
 			height: 100%
 	&__inner
@@ -146,6 +201,17 @@ a
 		justify-content: space-between
 		align-items: center
 		height: 100%
+		+media-breakpoint-down(md)
+			flex-direction: column
+	&__logo
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+		img
+			+media-breakpoint-down(md)
+				width: 180px
+	&__phone-last
+		+media-breakpoint-down(sm)
+			display: none
 	&__phone-spb, &__phone-msk
 		span
 			font-size: 14px
@@ -154,6 +220,8 @@ a
 			font-size: 24px
 			font-weight: 500
 			line-height: 30px
+			+media-breakpoint-down(lg)
+				font-size: 20px
 			a
 				color: $text
 				&:hover
@@ -161,11 +229,92 @@ a
 					text-decoration: none
 	&__btn
 		width: 270px
+		+media-breakpoint-down(lg)
+			width: 220px
+			.btn
+				font-size: 18px
+				height: 40px
+		+media-breakpoint-down(lg)
+			margin-top: 20px
 
+.gumburger
+	display: none
+	+media-breakpoint-down(md)
+		display: block
+		position: absolute
+		top: 2px
+		right: 15px
+		cursor: pointer
+		font-size: 30px
+
+.gumburger-left
+	display: none
+	+media-breakpoint-down(lg)
+		display: block
+		position: absolute
+		top: 2px
+		left: 15px
+		cursor: pointer
+		font-size: 30px
+
+
+.header__menu
+	+media-breakpoint-down(md)
+		position: absolute
+		top: 42px
+		right: -40px
+		z-index: 100000
+		+media-breakpoint-down(sm)
+			top: 84px
+		.menu__list
+			flex-direction: column
+			background: $accent
+			width: 300px
+			padding: 15px
+		.menu__link
+			height: 30px
+		.menu__item
+			&:hover
+				.menu__submenu
+					display: none
+		.menu__link--has_sub
+			position: relative
+			&:after
+				left: auto
+				right: 0
+				bottom: 11px
+
+.menu--active
+	display: block!important
 .menu
 	border-bottom: 2px solid $text
+	+media-breakpoint-down(md)
+		display: none
+	&__item--flag
+		+media-breakpoint-down(md)
+			display: none
+	&__item--contact
+		border-bottom: none!important
 	&__item--close
 		display: none
+		cursor: pointer
+		border-bottom: none!important
+		+media-breakpoint-down(md)
+			display: block
+			position: absolute!important
+			top: -38px
+			right: 54px
+			font-size: 30px
+		+media-breakpoint-down(sm)
+			top: -75px
+	&__item--home
+		img
+			+media-breakpoint-down(md)
+				display: none
+		span
+			display: none
+			+media-breakpoint-down(md)
+				display: block
 	&__list
 		display: flex
 		justify-content: space-between
@@ -175,6 +324,8 @@ a
 	&__item
 		position: relative
 		line-height: 24px
+		+media-breakpoint-down(md)
+			border-bottom: 1px solid $text
 		&:hover
 			.menu__submenu
 				display: block
@@ -198,6 +349,12 @@ a
 		list-style-type: none
 		border-top: 2px solid $text
 		z-index: 1000
+		+media-breakpoint-down(md)
+			position: static
+			padding: 0 10px 10px 10px
+			border-top: none
+			a
+				font-weight: 400
 		&:hover
 			display: block
 	&__sub-item
@@ -221,6 +378,7 @@ a
 			background: url('../img/@2x/trinagle.png') no-repeat
 			z-index: 10000
 
+
 // PROMO
 .promo
 	position: relative
@@ -239,11 +397,22 @@ a
 		position: absolute
 		top: 20px
 		left: 40px
+		+media-breakpoint-down(md)
+			font-size: 24px
+			line-height: 28px
+			background: rgba(0, 0, 0, .8)
+			padding: 10px
 	&__downtext
 		position: absolute
 		bottom: 20px
 		right: 40px
-
+		+media-breakpoint-down(md)
+			right: auto
+			left: 40px
+			font-size: 24px
+			line-height: 28px
+			background: rgba(0, 0, 0, .8)
+			padding: 10px
 // MAIN
 	.main
 		padding: 30px 40px 60px 40px
@@ -252,16 +421,47 @@ a
 .aside
 	width: 340px
 	padding: 30px 30px 30px 40px
+	position: relative
+	.menu__link--has_sub
+	&--active
+		display: block!important
+	+media-breakpoint-down(lg)
+		position: absolute
+		top: 42px
+		left: -40px
+		display: none
+		z-index: 999999
+		width: 300px
+		padding: 0
+	+media-breakpoint-down(lg)
+		top: 84px
 	&__list
 		list-style-type: none
 		padding-left: 0
 		border: 1px solid #e2e2e2
+		margin-bottom: 0
+		+media-breakpoint-down(lg)
+			background: $accent
+			border: none
 	&__item--close
 		display: none
+		+media-breakpoint-down(lg)
+			display: block
+			border-bottom: none!important
+			position: absolute!important
+			top: -54px
+			left: 0px
+			font-size: 30px
+			cursor: pointer
+		+media-breakpoint-down(md)
+			top: -89px
 	&__item
 		position: relative
 		border-bottom: 1px solid #e2e2e2
 		padding: 10px 0 10px 50px
+		+media-breakpoint-down(lg)
+			border-bottom: 1px solid $text
+			padding: 6px 0 4px 50px
 		img
 			position: absolute
 			top: 10px
@@ -269,8 +469,10 @@ a
 	&__link
 		color: $text
 		font-size: 19px
-		font-weight: 700
+		font-weight: 500
 		line-height: 22px
+		+media-breakpoint-down(lg)
+			font-size: 18px
 		&:hover
 			color: $text
 			text-decoration: none
@@ -287,10 +489,14 @@ a
 			font-family: "FontAwesome"
 			width: 20px
 			height: 20px
+			+media-breakpoint-down(lg)
+				color: $text
 	&__subaside
 		padding-left: 0
 		margin-top: 10px
 		display: none
+		+media-breakpoint-down(lg)
+			padding-left: 10px
 	&__sub-item--active
 		background: $accent
 		a
@@ -324,14 +530,202 @@ a
 			background: $accent
 	&__info
 		margin: 30px 0 40px
+		+media-breakpoint-down(lg)
+			margin: 0
 		img
 			position: static
+			+media-breakpoint-down(lg)
+				width: 300px
 	&__info-text
 		padding: 15px 45px 18px 30px
 		background: $accent
+		+media-breakpoint-down(lg)
+			padding: 15px 45px 18px 60px
 	&__info-title
 		font-weight: 500
 		line-height: 22px
 	&__info-p
 		line-height: 20px
 		margin-top: 10px
+
+// SECTION GOODS
+.goods
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__item
+		width: 194px
+		height: 234px
+		outline: 2px solid $accent
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		align-items: center
+		margin-bottom: 30px
+		transition: all .3s ease
+		p
+			margin-bottom: 0
+			text-align: center
+			font-size: 19px
+			line-height: 20px
+	a
+		color: #000
+		&:hover
+			text-decoration: none
+			.goods__item
+				outline: 5px solid $accent
+
+// SECTION ADVANTAGE
+.advantage
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__item
+		display: flex
+		max-width: 264px
+	&__img
+		margin-right: 28px
+	&__text
+		span
+			font-size: 20px
+			display: block
+			margin-bottom: 8px
+
+.beehive
+	display: flex
+	justify-content: space-between
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	a
+		color: $text
+		&:hover
+			text-decoration: none
+			.beehive__item
+				outline: 5px solid $accent
+			.beehive__title
+				text-decoration: underline
+			.btn-mini
+				background: $accent
+	&__item
+		max-width: 146px
+		height: 296px
+		outline: 2px solid $accent
+		transition: all .3s ease
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: center
+		text-align: center
+		padding: 9px 12px 14px 12px
+		margin-bottom: 30px
+	&__title
+		font-weight: 400
+		margin-top: 10px
+	&__price
+		font-size: 14px
+		margin-top: 10px
+		font-weight: 400
+		span
+			font-size: 22px
+			font-weight: 500
+	&__btn
+		margin-top: 5px
+		.btn-mini
+			height: 30px
+			width: 110px
+			background: #e2e2e2
+			font-size: 16px
+			color: $text
+			border: 0
+			font-weight: 400
+
+// SECTION CONTENT
+.sect-content
+	.youtube
+		float: right
+		margin-left: 30px
+		+media-breakpoint-down(sm)
+			float: none
+			margin: 0 auto 20px auto
+			text-align: center
+			img
+				margin: 0 auto
+
+.footer
+	margin-top: 64px
+	+media-breakpoint-down(md)
+		margin-top: 0
+		background: $accent
+	&__menu
+		background: $accent
+	&__inner
+		display: flex
+		padding: 36px 0 76px 0
+		+media-breakpoint-down(md)
+			padding: 15px 0
+	&__info
+		max-width: 310px
+		+media-breakpoint-down(md)
+			margin: 0 auto
+	&__adress
+		padding: 15px 0 20px 28px
+		p
+			font-size: 16px
+			line-height: 20px
+			font-weight: 400
+		a
+			margin-top: 10px
+			display: block
+			color: $text
+			font-weight: 400
+			text-decoration: underline
+	&__social
+		margin-top: 40px
+		+media-breakpoint-down(md)
+			margin-top: 0
+		img
+			margin-right: 10px
+			transition: all .3s ease
+			&:hover
+				opacity: .8
+	&__title
+		font-size: 24px
+		font-weight: 500
+		margin-bottom: 20px
+	&__submenu
+		background: #fff
+		list-style-type: none
+		padding-left: 0
+	&__item
+		margin-bottom: 10px
+		a
+			color: $text
+			font-size: 18px
+			font-weight: 400
+	&__catalog, &__states
+		margin-left: 40px
+		+media-breakpoint-down(md)
+			display: none
+.after-footer
+	color: #fff
+	padding: 20px 40px 20px 60px
+	font-size: 14px
+	+media-breakpoint-down(sm)
+		padding: 15px 10px
+	p
+		margin-bottom: 5px
+	a
+		color: #fff
+		text-decoration: underline
+		&:after
+			color: #fff

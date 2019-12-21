@@ -21,12 +21,14 @@
 
 	<div class="main">
 		<header class="header">
+			<a class="gumburger-left"><i class="fa fa-bars"></i></a>
+			<a class="gumburger"><i class="fa fa-bars"></i></a>
 			<div class="container">
 				<div class="header__line">
 
 					<div class="header__search">
 						<img src="img/@2x/search.png" alt="">
-						<form action="">
+						<form>
 							<input type="text" placeholder="Поиск по сайту">
 						</form>
 
@@ -35,6 +37,7 @@
 						<a href=""><img src="img/@2x/shop.png" alt=""></a>
 						<p>12 товаров</p>
 						<p>22560 руб.</p>
+						<a class="header__flag" href=""><img src="img/@2x/flag.png" alt=""></a>
 					</div>
 
 				</div>
@@ -50,12 +53,12 @@
 						<div class="header__phone-spb">
 							<span>Санкт-Петербург</span>
 							<p><a href="tel:+79052112423">+7 (905) 211-24-23</a></p>
-							<p><a href="tel:+79626844729">+7 (962) 684-47-29</a></p>
+							<p class="header__phone-last"><a href="tel:+79626844729">+7 (962) 684-47-29</a></p>
 						</div>	
 						<div class="header__phone-msk">
 							<span>Москва</span>
 							<p><a href="tel:+79255007198">+7 (925) 500-71-98</a></p>
-							<p><a href="tel:+79154597170">+7 (915) 459-71-70</a></p>
+							<p class="header__phone-last"><a href="tel:+79154597170">+7 (915) 459-71-70</a></p>
 						</div>	
 						<div class="header__btn">
 							<a href="" class="btn">Обратный звонок</a>
@@ -70,7 +73,7 @@
 				<div class="container">
 					<ul class="menu__list">
 						<li class="menu__item menu__item--close"><i class="fa fa-times"></i></li>	
-						<li class="menu__item menu__item--home"><a class="menu__link" href=""><img src="img/@2x/home.png" alt=""></a></li>
+						<li class="menu__item menu__item--home"><a class="menu__link" href=""><img src="img/@2x/home.png" alt=""><span>Главная</span></a></li>
 						<li class="menu__item"><a class="menu__link menu__link--has_sub" href="">Каталог</a>
 							<ul class="menu__submenu">
 								<li class="menu__sub-item"><a href="">Пчелиные ульи</a></li>
@@ -96,11 +99,16 @@
 						<li class="menu__item"><a class="menu__link" href="">Отзывы</a></li>
 						<li class="menu__item"><a class="menu__link menu__link--has_sub" href="">Статьи</a>
 							<ul class="menu__submenu">
-								<li class="menu__sub-item"><a href="">Пчелиные ульи</a></li>
+								<li class="menu__sub-item"><a href="">О нашей компании</a></li>
+								<li class="menu__sub-item"><a href="">Всё про улья</a></li>
+								<li class="menu__sub-item"><a href="">Инструкции к оборудованию из каталога</a></li>
+								<li class="menu__sub-item"><a href="">О пчёлах</a></li>
+								<li class="menu__sub-item"><a href="">Пчелопакеты в Санкт-Петербурге</a></li>
+								<li class="menu__sub-item"><a href="">Всё о мёде</a></li>
 							</ul>
 						</li>
-						<li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
-						<li class="menu__item"><a class="menu__link" href=""><img src="img/@2x/flag.png" alt=""></a></li>
+						<li class="menu__item menu__item--contact"><a class="menu__link" href="">Контакты</a></li>
+						<li class="menu__item menu__item--flag"><a class="menu__link" href=""><img src="img/@2x/flag.png" alt=""></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -140,59 +148,308 @@
 							<li class="aside__sub-item"><a href="">Комплектующие для медогонок</a></li>
 							<li class="aside__sub-item"><a href="">Оборудование для откачки мёда, фильтры, тара</a></li>
 						</ul>
-						</li>
-						<li class="aside__item"><img src="img/@2x/icon_04.png" alt=""><a class="aside__link" href="">Кремовалки</a></li>
-						<li class="aside__item"><img src="img/@2x/icon_05.png" alt=""><a class="aside__link" href="">Воскотопилки</a></li>
-						<li class="aside__item"><img src="img/@2x/icon_06.png" alt=""><a class="aside__link" href="">Дымари</a></li>
-						<li class="aside__item"><img src="img/@2x/icon_07.png" alt=""><a class="aside__link" href="">Костюмы пчеловода</a></li>
-						<li class="aside__item"><img src="img/@2x/icon_08.png" alt=""><a class="aside__link aside__link--has_sub" href="">Оборудование и инструменты</a>
-							<ul class="aside__subaside">
-								<li class="aside__sub-item"><a href="">Для работы с ульями</a></li>
-								<li class="aside__sub-item"><a href="">Для наращвания рамок</a></li>
-								<li class="aside__sub-item"><a href="">Для распечатки сот</a></li>
-								<li class="aside__sub-item"><a href="">Для распечатки сот</a></li>
-							</ul>
-							</li>
-							<li class="aside__item"><img src="img/@2x/icon_09.png" alt=""><a class="aside__link" href="">Препараты для пчёл</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_10.png" alt=""><a class="aside__link" href="">Матки пчелиные</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_11.png" alt=""><a class="aside__link" href="">Пчелопакеты в 2020 году</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_12.png" alt=""><a class="aside__link" href="">Пчелиный мёд</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_13.png" alt=""><a class="aside__link" href="">Пчелиный воск</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_14.png" alt=""><a class="aside__link" href="">Семена растений- медоносов</a></li>
-							<li class="aside__item"><img src="img/@2x/icon_15.png" alt=""><a class="aside__link" href="">Книгиx</a></li>
+					</li>
+					<li class="aside__item"><img src="img/@2x/icon_04.png" alt=""><a class="aside__link" href="">Кремовалки</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_05.png" alt=""><a class="aside__link" href="">Воскотопилки</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_06.png" alt=""><a class="aside__link" href="">Дымари</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_07.png" alt=""><a class="aside__link" href="">Костюмы пчеловода</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_08.png" alt=""><a class="aside__link aside__link--has_sub" href="">Оборудование и инструменты</a>
+						<ul class="aside__subaside">
+							<li class="aside__sub-item"><a href="">Для работы с ульями</a></li>
+							<li class="aside__sub-item"><a href="">Для наращвания рамок</a></li>
+							<li class="aside__sub-item"><a href="">Для распечатки сот</a></li>
+							<li class="aside__sub-item"><a href="">Для распечатки сот</a></li>
 						</ul>
+					</li>
+					<li class="aside__item"><img src="img/@2x/icon_09.png" alt=""><a class="aside__link" href="">Препараты для пчёл</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_10.png" alt=""><a class="aside__link" href="">Матки пчелиные</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_11.png" alt=""><a class="aside__link" href="">Пчелопакеты в 2020 году</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_12.png" alt=""><a class="aside__link" href="">Пчелиный мёд</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_13.png" alt=""><a class="aside__link" href="">Пчелиный воск</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_14.png" alt=""><a class="aside__link" href="">Семена растений- медоносов</a></li>
+					<li class="aside__item"><img src="img/@2x/icon_15.png" alt=""><a class="aside__link" href="">Книгиx</a></li>
+				</ul>
 
-						<div class="aside__info">
-							<img src="img/@2x/girl.png" alt="">
-							<div class="aside__info-text">
-								<div class="aside__info-title">Набор начинающего пчеловода</div>
-								<div class="aside__info-p">Готовые наборы для создания небольшой любительской пасеки</div>
-							</div>
-						</div>
-
-						<ul class="aside__list">
-							<li class="aside__item"><img src="img/@2x/icon_16.png" alt=""><a class="aside__link aside__link--has_sub" href="">Статьи и полезная информация</a>
-								<ul class="aside__subaside">
-									<li class="aside__sub-item"><a href="">О нашей компании</a></li>
-									<li class="aside__sub-item"><a href="">Всё про улья</a></li>
-									<li class="aside__sub-item"><a href="">Инструкции к оборудованию из каталога</a></li>
-									<li class="aside__sub-item"><a href="">О пчёлах</a></li>
-									<li class="aside__sub-item"><a href="">Пчелопакеты в Санкт-Петербурге</a></li>
-									<li class="aside__sub-item"><a href="">Всё о мёде</a></li>
-								</ul>
-							</li>
-									<li class="aside__item"><img src="img/@2x/icon_17.png" alt=""><a class="aside__link" href="">Видео</a>
-						</ul>	
-
-					</aside>
-					<div class="main">
-
+				<div class="aside__info">
+					<img src="img/@2x/girl.png" alt="">
+					<div class="aside__info-text">
+						<div class="aside__info-title">Набор начинающего пчеловода</div>
+						<div class="aside__info-p">Готовые наборы для создания небольшой любительской пасеки</div>
 					</div>
 				</div>
 
+				<ul class="aside__list">
+					<li class="aside__item"><img src="img/@2x/icon_16.png" alt=""><a class="aside__link aside__link--has_sub" href="">Статьи и полезная информация</a>
+						<ul class="aside__subaside">
+							<li class="aside__sub-item"><a href="">О нашей компании</a></li>
+							<li class="aside__sub-item"><a href="">Всё про улья</a></li>
+							<li class="aside__sub-item"><a href="">Инструкции к оборудованию из каталога</a></li>
+							<li class="aside__sub-item"><a href="">О пчёлах</a></li>
+							<li class="aside__sub-item"><a href="">Пчелопакеты в Санкт-Петербурге</a></li>
+							<li class="aside__sub-item"><a href="">Всё о мёде</a></li>
+						</ul>
+					</li>
+					<li class="aside__item"><img src="img/@2x/icon_17.png" alt=""><a class="aside__link" href="">Видео</a>
+					</ul>	
+
+				</aside>
+				<div class="content">
+
+					<h1 class="h1">Купить ульи “Калинка” от производителя в Санкт-Петербурге и Москве</h1>
+
+					<section class="goods">
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_01.png" alt="">
+								<p>Ульи</p>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_02.png" alt="">
+								<p>Медогонки</p>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_03.png" alt="">
+								<p>Кремовалки</p>
+							</div>				
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_04.png" alt="">
+								<p>Воскотопилки</p>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_05.png" alt="">
+								<p>Дымари</p>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_06.png" alt="">
+								<p>Костюмы пчеловода</p>
+							</div>
+						</a>
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_07.png" alt="">
+								<p>Оборудование и инстументы</p>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="goods__item">
+								<img src="img/@2x/item_08.png" alt="">
+								<p>Препараты для пчёл</p>
+							</div>
+						</a>
+					</section>
+
+
+					<h2 class="h2">Преимущества</h2>
+
+					<section class="advantage">
+
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_01.png" alt=""></div>
+							<div class="advantage__text"><p><span>20 лет на рынке</span> квалифицированные специалисты — профессионалы своего дела</p></div>
+						</div>
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_02.png" alt=""></div>
+							<div class="advantage__text"><p><span>Собственное производство ульев 700 м<sup>2</sup></span> возможно дальшее доукомплектовка и выполнение индивидуальных заказов</p></div>
+						</div>
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_03.png" alt=""></div>
+							<div class="advantage__text"><p><span>Натуральные материалы</span> обеспечиваем комфорт для ваших пчёл в любое время года</p></div>
+						</div>
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_04.png" alt=""></div>
+							<div class="advantage__text"><p><span>Складские помещения<br/> 650 м<sup>2</sup></span> широкий спектр продукции для пчеловодства всегда в наличии</p></div>
+						</div>
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_05.png" alt=""></div>
+							<div class="advantage__text"><p><span>Мы отправляем наши товары во все регионы России</span> в кратчайшие сроки, любым удобным вам способом</p></div>
+						</div>
+						<div class="advantage__item">
+							<div class="advantage__img"><img src="img/@2x/advantage-icon_06.png" alt=""></div>
+							<div class="advantage__text"><p><span>Гарантия 1 год на все типы ульев от изготовителя</span></p></div>
+						</div>
+
+					</section>
+
+					<h2class="h2">Наши ульи</h2>
+					<section class="beehive">
+
+						<a href="">
+							<div class="beehive__item">
+								<div class="beehive__img"><img src="img/@2x/beehive_01.png" alt=""></div>
+								<div class="beehive__title">Улей Дадана- Блатта на 10 рамок</div>
+								<div class="beehive__price">от <span>3300</span> руб.</div>
+								<div class="beehive__btn"><div class="btn btn-mini">Подробнее</div></div>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="beehive__item">
+								<div class="beehive__img"><img src="img/@2x/beehive_02.png" alt=""></div>
+								<div class="beehive__title">Улей Дадана- Блатта на 12 рамок</div>
+								<div class="beehive__price">от <span>3900</span> руб.</div>
+								<div class="beehive__btn"><div class="btn btn-mini">Подробнее</div></div>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="beehive__item">
+								<div class="beehive__img"><img src="img/@2x/beehive_03.png" alt=""></div>
+								<div class="beehive__title">Улей Дадана- Блатта на 12 рамок</div>
+								<div class="beehive__price">от <span>4000</span> руб.</div>
+								<div class="beehive__btn"><div class="btn btn-mini">Подробнее</div></div>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="beehive__item">
+								<div class="beehive__img"><img src="img/@2x/beehive_03.png" alt=""></div>
+								<div class="beehive__title">Улей Дадана- Блатта на 14 рамок</div>
+								<div class="beehive__price">от <span>4450</span> руб.</div>
+								<div class="beehive__btn"><div class="btn btn-mini">Подробнее</div></div>
+							</div>
+						</a>
+
+						<a href="">
+							<div class="beehive__item">
+								<div class="beehive__img"><img src="img/@2x/beehive_03.png" alt=""></div>
+								<div class="beehive__title">Улей Дадана- Блатта на 20 рамок</div>
+								<div class="beehive__price">от <span>6200</span> руб.</div>
+								<div class="beehive__btn"><div class="btn btn-mini">Подробнее</div></div>
+							</div>
+						</a>
+
+					</section>
+
+					<section class="sect-content">
+						<div class="youtube">
+							<img class="img-r" src="img/@2x/youtube.png" alt="">
+						</div>
+						<p>Не секрет, что при производстве ульев важнейшую роль играет качество материалов и точность размеров, с учетом особенностей природного поведения пчел.</p>
+						<p>Калинка на протяжении вот уже <a href="">20 лет занимается производством деревянных ульев</a> для пчел разного типа: Дадана-Блатта, улей - лежак, а с недавних пор и многокорпусный улей Лангстрота-Рута. Помимо этого на постоянной основе производятся облегченные корпуса, магазины на улья, противоварроатозные сетчатые днища, рамоносы, потолочные кормушки, пчеловодный инвентарь.</p>
+						<p>Основное производство и магазин пчеловодство находится в Санкт-Петербурге, а в Москве открыт магазин-склад пчеловодство, где Вы можете увидеть и купить улей для пчел, вощину и весь необходимый инвентарь для работы на пасеке.</p>
+						<p>За время работы технология производства ульев значительно улучшилась, благодаря запуску на предприятии нового немецкого, итальянского, российского и шведского оборудования для качественной сушки, обработки и распила древесины. Помимо этого мы <a href="">постоянно работаем над совершенствованием конструкции ульев</a>, чтобы работа на пасеке приносила не только удовольствие, но и становилась все более эффективной. Размеры ульев полностью соответствуют требованиям ГОСТ Российской Федерации.</p>
+						<p><a href="">Срок службы ульев</a>, произведенных на предприятии <a href="">от 20 до 40 лет, возможно и более</a>. При покупке покупателю предоставляется <a href="">гарантия на ульи 1 год</a>.</p>
+						<p>Помимо производства у нас есть своя пасека, где мы на протяжении многих лет успешно разводим пчел, пробуем в работе новые конструкции ульев. Поэтому прежде чем запустить в производство новинку, <a href="">ульи проходят проверку на собственной</a> пасеке. Любители меда могут купить у нас мед и другие продукты пчеловодства прямо с пасеки. А пчеловодам помимо ульев и пчеловодческого инвентаря, мы можем предложить <a href="">купить пчелопакеты, пчелосемьи</a>.</p>
+						<p>Мы всегда рады помочь нашим клиентам в выборе нужных конструкций ульев, комплектующих и пчеловодческого инвентаря для организации эффективной работы на пасеке, выслушать предложения и пожелания. Поэтому за годы работы у нас появилось <a href="">много постоянных покупателей не только в России</a>, но и в Европейских странах, Прибалтики, Финляндии, Белоруссии, Украине, Казахстане.</p>
+						<p>На нашем сайте Вы сможете <a href="">ознакомиться и купить основные типы производимых сосновых ульев</a> "Калинка", пчеловодческого инвентаря от таких известных производителей как "Пчеловодство Орел", АВВ-100, Мелиса 93, "Донская пчела", "Пчелотехника", "Агробибоопрм", "Унифарм" и многие другие, с технологией производства, ценами, познакомиться с нашей пасекой, а также найти <a href="">много интересной информации и видео-роликов по организации пасеки</a>, разведению пчел.</p>
+					</section>
+
+				</div>
 			</div>
 
-			<script src="js/scripts.min.js"></script>
 
-		</body>
-		</html>
+
+			<footer class="footer">
+				<nav class="menu footer__menu">
+					<div class="container">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--close"><i class="fa fa-times"></i></li>	
+							<li class="menu__item menu__item--home"><a class="menu__link" href=""><img src="img/@2x/home.png" alt=""></a></li>
+							<li class="menu__item"><a class="menu__link" href="">Каталог</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Акции</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Оплата и доставка</a></li>
+							<li class="menu__item"><a class="menu__link" href="">О компании</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Отзывы</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Статьи</a></li>
+							<li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="container">
+					<div class="footer__inner">
+
+						<div class="footer__info">
+							<div class="header__phone-spb">
+								<span>Санкт-Петербург</span>
+								<p><a href="tel:+79052112423">+7 (905) 211-24-23</a></p>
+								<p><a href="tel:+79626844729">+7 (962) 684-47-29</a></p>
+								<div class="footer__adress">
+									<p>Санкт-Петербург, деревня Малое Карлино, Пушкинское шоссе 17, корпус 7</p>
+									<a href="mailto:kalinka.81@mail.ru">kalinka.81@mail.ru</a>
+								</div>
+							</div>	
+							<div class="header__phone-msk">
+								<span>Москва</span>
+								<p><a href="tel:+79255007198">+7 (925) 500-71-98</a></p>
+								<p><a href="tel:+79154597170">+7 (915) 459-71-70</a></p>
+								<div class="footer__adress">
+									<p>Москва, 2-й Южнопортовый<br/> проезд, 26 ас 11</p>
+								</div>
+							</div>	
+							<div class="footer__social">
+								<a href=""><img src="img/@2x/social_01.png" alt=""></a>
+								<a href=""><img src="img/@2x/social_02.png" alt=""></a>
+								<a href=""><img src="img/@2x/social_03.png" alt=""></a>
+								<a href=""><img src="img/@2x/social_04.png" alt=""></a>
+								<a href=""><img src="img/@2x/social_05.png" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__catalog">
+							<div class="footer__title">Каталог</div>
+							<ul class="footer__submenu">
+								<li class="footer__item"><a href="">Пчелиные ульи</a></li>
+								<li class="footer__item"><a href="">Пчелиные ульи в Москве</a></li>
+								<li class="footer__item"><a href="">Медогонки</a></li>
+								<li class="footer__item"><a href="">Кремовалки</a></li>
+								<li class="footer__item"><a href="">Воскотопилки</a></li>
+								<li class="footer__item"><a href="">Дымари</a></li>
+								<li class="footer__item"><a href="">Костюмы пчеловода</a></li>
+								<li class="footer__item"><a href="">Оборудование и инструменты</a></li>
+								<li class="footer__item"><a href="">Препараты для пчёл</a></li>
+								<li class="footer__item"><a href="">Матки пчелиные</a></li>
+								<li class="footer__item"><a href="">Пчелопакеты в 2020 году</a></li>
+								<li class="footer__item"><a href="">Пчелиный мёд</a></li>
+								<li class="footer__item"><a href="">Пчелиныё воск</a></li>
+								<li class="footer__item"><a href="">Семена растений-медоносов</a></li>
+								<li class="footer__item"><a href="">Книги</a></li>
+							</ul>
+						</div>
+
+						<div class="footer__states">
+							<div class="footer__title">Статьи</div>
+							<ul class="footer__submenu">
+								<li class="footer__item"><a href="">О нашей компании</a></li>
+								<li class="footer__item"><a href="">Всё про улья</a></li>
+								<li class="footer__item"><a href="">Инструкции к оборудованию из каталога</a></li>
+								<li class="footer__item"><a href="">О пчёлах</a></li>
+								<li class="footer__item"><a href="">Пчелопакеты в Санкт-Петербурге</a></li>
+								<li class="footer__item"><a href="">Всё о мёде</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div class="after-footer">
+			<div class="container">
+				<div class="copy">
+					<p>© 2019–2020 — Сосновый улей «Калинка».</p>
+					<p>Производство ульев для пчёл из натуральной сосны в Санкт-Петербурге.</p>
+					<p><a href="">Карта сайта</a></p>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/scripts.min.js"></script>
+
+	</body>
+	</html>
