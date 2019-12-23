@@ -58,6 +58,9 @@ body
 	color: $text
 	background: url('../img/@2x/bg.png')
 
+strong
+	font-weight: 500
+
 p
 	margin-bottom: 10px
 
@@ -71,10 +74,14 @@ h1, .h1
 	font-size: 36px
 	line-height: 36px
 	margin-bottom: 20px
+	margin-top: -4px
 	+media-breakpoint-down(md)
 		font-size: 28px
 		line-height: 30px
 		margin-bottom: 10px
+	+media-breakpoint-down(sm)
+		font-size: 20px
+		line-height: 22px
 
 h2, .h2
 	font-weight: 500
@@ -84,6 +91,9 @@ h2, .h2
 	+media-breakpoint-down(md)
 		font-size: 26px
 		line-height: 28px
+	+media-breakpoint-down(sm)
+		font-size: 18px
+		line-height: 20px
 
 
 .btn
@@ -105,15 +115,49 @@ h2, .h2
 		text-decoration: none
 		border-color: $green
 		background: #fff
+	&--yellow
+		background-color: $accent
+		border: 2px solid $accent
+		font-weight: 400
+		color: $text
+		width: 230px
+		height: 40px
+		margin: 0 auto
+		font-size: 14px
+		&:hover
+			border: 2px solid $accent
+			background: #fff
+			color: $text
+	&--yel-empty
+		background: #fff
+		border: 2px solid $accent
+		font-weight: 400
+		color: $accent
+		width: 230px
+		height: 40px
+		margin: 0 auto
+		font-size: 14px
+		cursor: pointer
+		&:hover
+			border: 2px solid $green
+			color: $text
+			background: $green
+		img
+			margin-right: 10px
+			padding-bottom: 2px
 
 .container
 	max-width: 100%
 	padding:
 		right: $gutter
 		left: $gutter
-	margin:
+	margin
 		left: auto
 		right: auto
+	+media-breakpoint-down(md)
+		padding:
+			right: 15px
+			left: 15px
 
 .img-r
 	display: block
@@ -128,9 +172,10 @@ h2, .h2
 .wrap
 	display: flex
 .content
-	margin: 25px 40px 0 0
+	margin: 0px 40px 0 0
+	width: 100%
 	+media-breakpoint-down(lg)
-		margin: 10px 15px 0 15px
+		margin: 0px 15px 0 15px
 
 
 // HEAD
@@ -156,7 +201,7 @@ h2, .h2
 		padding-left: 20px
 		font-style: italic
 		+media-breakpoint-down(lg)
-			margin-left: 20px
+			margin-left: 45px
 		+media-breakpoint-down(sm)
 			background: $accent
 			input
@@ -169,7 +214,7 @@ h2, .h2
 		width: 230px
 		align-items: center
 		justify-content: space-between
-		margin-right: 28px
+		margin-right: 45px
 		+media-breakpoint-down(md)
 			width: 283px
 		+media-breakpoint-down(sm)
@@ -259,10 +304,13 @@ h2, .h2
 
 
 .header__menu
+	.container
+		+media-breakpoint-down(md)
+			padding-left: 0
 	+media-breakpoint-down(md)
 		position: absolute
 		top: 42px
-		right: -40px
+		right: -15px
 		z-index: 100000
 		+media-breakpoint-down(sm)
 			top: 84px
@@ -303,7 +351,7 @@ h2, .h2
 			display: block
 			position: absolute!important
 			top: -38px
-			right: 54px
+			right: 29px
 			font-size: 30px
 		+media-breakpoint-down(sm)
 			top: -75px
@@ -376,7 +424,7 @@ h2, .h2
 			width: 16px
 			height: 9px
 			background: url('../img/@2x/trinagle.png') no-repeat
-			z-index: 10000
+			z-index: 1000
 
 
 // PROMO
@@ -385,6 +433,9 @@ h2, .h2
 	font-size: 30px
 	font-weight: 500
 	color: #fff
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		margin-bottom: 10px
 	&__img
 		height: 300px
 		width: 100%
@@ -420,7 +471,7 @@ h2, .h2
 // ASIDE
 .aside
 	width: 340px
-	padding: 30px 30px 30px 40px
+	padding: 0px 30px 30px 40px
 	position: relative
 	.menu__link--has_sub
 	&--active
@@ -552,11 +603,26 @@ h2, .h2
 .goods
 	display: flex
 	flex-wrap: wrap
-	justify-content: space-between
+	justify-content: flex-start
+	+media-breakpoint-down(lg)
+		justify-content: space-between
 	+media-breakpoint-down(sm)
 		flex-direction: column
 		justify-content: center
 		align-items: center
+	&__item-wrap
+		margin-right: 30px
+		+media-breakpoint-down(lg)
+			width: 25%
+		+media-breakpoint-down(md)
+			width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
+
+		&:nth-child(4n+4)
+			margin-right: 0
+		+media-breakpoint-down(lg)
+			margin-right: 0
 	&__item
 		width: 194px
 		height: 234px
@@ -567,6 +633,8 @@ h2, .h2
 		align-items: center
 		margin-bottom: 30px
 		transition: all .3s ease
+		+media-breakpoint-down(lg)
+			margin: 0 auto 30px auto
 		p
 			margin-bottom: 0
 			text-align: center
@@ -591,17 +659,35 @@ h2, .h2
 	&__item
 		display: flex
 		max-width: 264px
+		+media-breakpoint-down(md)
+			max-width: 50%
+			margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			max-width: 100%
+		+media-breakpoint-down(xs)
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
 	&__img
 		margin-right: 28px
+		+media-breakpoint-down(xs)
+			margin-right: 0
+			margin-bottom: 10px
 	&__text
 		span
 			font-size: 20px
 			display: block
 			margin-bottom: 8px
+			+media-breakpoint-down(xs)
+				line-height: 22px
 
 .beehive
 	display: flex
-	justify-content: space-between
+	justify-content: flex-start
+	flex-wrap: wrap
+	+media-breakpoint-down(lg)
+		justify-content: space-between
 	+media-breakpoint-down(sm)
 		flex-direction: column
 		justify-content: center
@@ -628,6 +714,18 @@ h2, .h2
 		text-align: center
 		padding: 9px 12px 14px 12px
 		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			margin: 0 auto 15px auto
+	&__item-wrap
+		margin-right: 30px
+		&:nth-child(5n+5)
+			margin-right: 0
+		+media-breakpoint-down(lg)
+			margin-right: 0
+		+media-breakpoint-down(md)
+			width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
 	&__title
 		font-weight: 400
 		margin-top: 10px
@@ -729,3 +827,623 @@ h2, .h2
 		text-decoration: underline
 		&:after
 			color: #fff
+
+
+	// SINGLE PAGE
+.breadcrumb
+	display: flex
+	flex-wrap: wrap
+	list-style-type: none
+	font-size: 12px
+	color: #898383
+	padding-left: 0
+	margin:
+		bottom: 10px
+		top: 8px
+	li
+		line-height: 18px
+		&:last-child
+			&:after
+				display: none
+		&:after
+			content: '::'
+			color: #898383
+			margin-left: 10px
+			margin-right: 10px
+		a
+			text-decoration: underline
+		img
+			padding-bottom: 5px
+
+// PAGE BEEHIVE
+.page-beehive
+	flex-wrap: wrap
+	.beehive__item-wrap
+		+media-breakpoint-down(lg)
+			margin-right: 0
+			width: 25%
+		+media-breakpoint-down(md)
+			width: 50%
+		&:nth-child(4n+4)
+			margin-right: 0
+		&:nth-child(5n+5)
+			margin-right: 30px
+			+media-breakpoint-down(lg)
+				margin-right: 0
+		+media-breakpoint-down(sm)
+			width: 100%
+	.beehive__item
+		max-width: 195px
+		width: 100%
+		height: 320px
+		+media-breakpoint-down(lg)
+			margin: 0 auto  30px auto
+		+media-breakpoint-down(md)
+			margin: 0 auto  15px auto
+		justify-content: space-around
+	.beehive__title
+		width: 171px
+
+// PRODUCT
+.product
+	&__img
+		float: left
+		width: 270px
+		height: 324px
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 2px solid $accent
+		margin-right: 30px
+		+media-breakpoint-down(md)
+			float: none
+			margin: 0 auto 15px auto
+	&__title
+		font-size: 18px
+		margin-top: 30px
+		img
+			padding-bottom: 8px
+			margin: 0 10px 5px 0
+	&__list
+		padding-left: 32px
+		list-style-type: none
+		li
+			position: relative
+			text-decoration: underline
+			margin-bottom: 5px
+			&:before
+				content: ''
+				position: absolute
+				left: -25px
+				top: 9px
+				background: $accent
+				width: 4px
+				height: 4px
+				border-radius: 100%
+	&__youtube
+		display: flex
+		flex-wrap: wrap
+		+media-breakpoint-down(md)
+			justify-content: center
+	&__you-item
+		margin-right: 30px
+		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			margin-right: 0
+		img
+			margin-bottom: 15px
+		a
+			text-decoration: underline
+			color: $text
+			font-weight: 400
+			padding-right: 20px
+			max-width: 315px
+			display: block
+
+// PAGE BEEHIVE10
+.bigger
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	+media-breakpoint-down(md)
+		flex-direction: column
+		justify-content: center
+	&__wrap
+		width: 48%
+		margin-right: 30px
+		line-height: 18px
+		+media-breakpoint-down(lg)
+			margin: 0 auto
+		+media-breakpoint-down(md)
+			width: 100%
+		&:nth-child(2n+2)
+			margin-right: 0
+		a
+			color: $text
+			font-weight: 400
+			&:hover
+				text-decoration: none
+				.bigger__title
+					text-decoration: underline
+				.btn
+					background: $accent
+				.bigger__item
+					outline: 5px solid $accent
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		outline: 2px solid $accent
+		height: 230px
+		transition: .3s all ease
+		margin-bottom: 30px
+		max-width: 416px
+		width: 100%
+		+media-breakpoint-down(lg)
+			margin: 0 auto 30px auto
+		+media-breakpoint-down(lg)
+			margin: 0 auto 15px auto
+	&__info
+		max-width: 170px
+	&__img
+		margin-right: 60px
+		+media-breakpoint-down(xs)
+			margin-right: 10px
+	&__title
+		font-size: 18px
+		line-height: 20px
+	&__price-wrap
+		margin-top: 20px
+	&__price
+		span
+			font-weight: 500
+			font-size: 22px
+	&__btn
+		margin-top: 20px
+		.btn
+			width: 100%
+
+
+// CARD PAGE
+.card
+	display: flex
+	+media-breakpoint-down(md)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__slider-wrap
+		border: 2px solid $accent	
+		width: 266px
+		margin-right: 30px
+		position: relative
+		+media-breakpoint-down(md)
+			margin-right: 0
+		.y_prevArrow, .y_nextArrow
+			position: absolute
+			top: 50%
+			font-size: 50px
+			margin-top: -25px
+			opacity: .6
+			cursor: pointer
+			z-index: 10000
+		.y_prevArrow
+			left: -22px
+		.y_nextArrow
+			right: -20px
+	&__slider
+		overflow: hidden
+		width: 266px
+		+media-breakpoint-down(md)
+			overflow: visible
+	&__slide
+	&__slide-img
+		width: 266px
+		height: 360px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__dots
+		.slick-dots
+			display: flex
+			flex-wrap: wrap
+			list-style-type: none
+			width: 268px
+			padding-left: 0
+			margin-top: 14px
+			+media-breakpoint-down(md)
+				display: none!important
+			li
+				margin-right: 14px
+				margin-bottom: 14px
+				cursor: pointer
+				&:nth-child(3n+3)
+					margin-right: 0
+				img
+					width: 78px
+					height: 100px
+					border: 2px solid $accent
+	&__right
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		max-width: 570px
+		width: 100%
+		+media-breakpoint-down(md)
+			margin-top: 20px
+		+media-breakpoint-down(md)
+	&__text
+		width: 270px
+		font-size: 14px
+		+media-breakpoint-down(sm)
+			order: 1
+			margin: 0 auto
+	&__calc
+		width: 270px
+		height: 320px
+		border: 2px solid $accent
+		text-align: center
+		padding: 20px 0
+		+media-breakpoint-down(sm)
+			margin: 0 auto
+	&__price
+		span
+			font-size: 44px
+	&__qual
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 30px
+		font-size: 19px
+		margin-bottom: 20px
+		input
+			width: 50px
+			border: 1px solid #e3e3e3
+			text-align: center
+			margin: 0 10px
+			&::placeholder
+				font-style: normal
+		.s-minus, .s-plus
+			text-align: center
+			padding-bottom: 10px
+			width: 30px
+			height: 30px
+			background: $accent
+			cursor: pointer
+	&__info
+		padding: 10px 20px
+		strong
+			font-size: 24px
+		p
+			margin-bottom: 0
+			line-height: 20px
+			margin-bottom: 5px
+	&__container
+		width: 100%
+		margin-top: 40px
+		+media-breakpoint-down(md)
+			margin-top: 15px
+		p
+			margin-bottom: 0px
+			padding-left: 33px
+	&__title-p
+		line-height: 20px
+		+media-breakpoint-down(xs)
+			margin-top: 5px
+		strong
+			font-size: 24px
+	&__title
+		display: flex
+		align-items: center
+		margin: 5px 0
+		font-size: 18px
+	&__title--mb0
+		margin-bottom: 0
+		line-height: 20px
+	&__t-img
+		padding-bottom: 5px
+		margin-right: 15px
+	&__table
+		max-width: 530px
+		width: 100%
+		margin-top: 10px
+		margin-left: 33px
+		margin-bottom: 15px
+		+media-breakpoint-down(md)
+			max-width: 90%
+			margin-right: 10px
+		tr
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 9px
+				left: -30px
+				width: 20px
+				height: 20px
+				background: url('../img/@2x/check.png') no-repeat
+		td:nth-child(2n)
+			width: 50px
+			text-align: center
+
+.card-product__title
+	+media-breakpoint-down(md)
+		margin-top: 0
+
+// SHOP PAGE
+.shop
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 19px
+		margin-bottom: 10px
+		+media-breakpoint-down(md)
+			flex-direction: column
+			height: 280px
+			margin-bottom: 30px
+	&__img
+		border: 2px solid $accent
+		width: 70px
+		height: 92px
+		display: flex
+		justify-content: center
+		align-items: center
+	&__title
+		font-size: 14px
+		p
+			margin-bottom: 0
+		strong
+			font-size: 19px
+	.card__qual
+		margin-bottom: 0
+	&__cost
+		margin-top: 20px
+		padding-top: 20px
+		padding-right: 20px
+		border-top: 1px solid #e2e2e2
+		text-align: right
+		font-size: 16px
+		+media-breakpoint-down(md)
+			padding-right: 0
+			text-align: center
+		span
+			font-size: 36px
+			font-weight: 500
+
+//FORM
+.hidden
+	display: none
+.form
+	position: relative
+	display: flex
+	margin: 0 auto
+	flex-direction: column
+	max-width: 100%
+	width: 100%
+	padding: 40px 40px 40px 0
+	background-color: #fff	
+	+media-breakpoint-down(md)
+		padding: 0 0 40px 0
+	.form__p
+		color: #363636
+		text-align: center
+		font-size: 11px
+		max-width: 300px
+		margin: 0 auto
+		line-height: 14px
+	.btn
+		margin: 30px 0 0 0
+		font-weight: 500
+		font-size: 24px
+		width: 270px
+		height: 45px
+		+media-breakpoint-down(md)
+			margin: 30px auto 0 auto
+	.h3
+		font-size: 500px
+		font-size: 36px
+		margin: 0
+		padding-bottom: 10px
+		+media-breakpoint-down(md)
+			text-align: center
+			font-size: 25px
+			line-height: 27px
+			margin-top: 30px
+	input, textarea
+		padding: 9px 9px 9px 20px
+		border: 1px solid $text
+		color: #363636
+		margin-bottom: 10px
+		font-size: 16px
+		font-style: italic
+		&::-webkit-input-placeholder
+			color: #363636
+			opacity: 1
+		&::-moz-placeholder
+			color: #363636
+			opacity: 1
+		&::-ms-input-placeholder
+			color: #363636
+
+.wrap-inpute
+	display: flex
+	+media-breakpoint-down(md)
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		align-items: center
+	&__item
+		width: 100%
+		margin-right: 30px
+		+media-breakpoint-down(md)
+			margin-right: 0
+		&:last-child
+			margin-right: 0
+		label
+			display: block
+		input
+			width: 100%
+			max-width: 360px
+			box-shadow: 0px 3px 0px 0px #e2e2e2 inset
+textarea
+	border-radius: 30px
+button.mfp-close
+	padding: 20px	
+.mfp-close //картинка закрытися popup
+	width: 22px
+	height: 22px
+	padding: 0
+	right: 26px
+	top: -13px
+	.fa
+		display: block
+
+.cheked-wrap
+	display: flex
+	align-items: center
+	+media-breakpoint-down(sm)
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+
+.input-cheked
+	cursor: pointer
+	padding-left: 20px
+	max-width: 520px
+	margin: 20px 20px 0
+	position: relative
+	span
+		cursor: pointer
+	label
+		line-height: 16px
+		margin-bottom: 0
+		height: 100%
+	input
+		display: none
+	input[type=checkbox]:checked + label:before
+		content: "\f00c"
+		font-family: "FontAwesome"
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
+		font-size: 20px
+		color: $accent
+		text-align: center
+		line-height: 15px
+		position: absolute
+		top: 5px
+		left: -16px
+		cursor: pointer
+	&__text
+		position: relative
+		a
+			color: $text
+			text-decoration: underline
+		&:before
+			content: ''
+			position: absolute
+			top: -5px
+			left: -40px
+			width: 30px
+			height: 30px
+			border-radius: 3px
+			border: 2px solid $accent
+			cursor: pointer
+.input-addres
+	margin-top: 30px
+	display: flex
+	flex-direction: column
+
+#callback
+	max-width: 800px
+	padding: 20px
+	position: relative
+	z-index: 9999999999999
+// END FORM
+
+
+// STATES PAGE
+.states
+	display: flex
+	flex-wrap: wrap
+	+media-breakpoint-down(md)
+		flex-direction: column
+		align-items: center
+	&__item
+		margin-right: 30px
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			margin-right: 0
+		&:nth-child(2n+2)
+			margin-right: 0
+	&__img
+		height: 184px
+		width: 416px
+		position: relative
+		+media-breakpoint-down(xs)
+			width: 100%
+			height: auto
+		img
+			object-fit: cover
+			height: 100%
+			width: 100%
+	&__title
+		font-size: 18px
+		font-weight: 500
+		height: 54px
+		border: 2px solid $accent
+		border-top: 0
+		display: flex
+		align-items: center
+		padding: 0 20px
+
+// ABOUT
+.about
+	display: flex
+	flex-wrap: wrap
+	+media-breakpoint-down(lg)
+		justify-content: space-between
+	&__wrap
+		margin-right: 30px	
+		+media-breakpoint-down(md)
+			width: 48%
+			margin-right: 0
+		+media-breakpoint-down(sm)
+			width: 100%
+		&:nth-child(3n+3)
+			margin-right: 0
+	&__item
+		width: 270px
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			margin: 0 auto 30px auto
+	&__info
+		border: 2px solid $accent
+		border-top: none
+		height: 168px
+		padding: 10px 25px 15px 25px
+		overflow: hidden
+	&__img
+		width: 270px
+		height: 170px
+		position: relative
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__title
+		font-size: 19px
+		font-weight: 500
+		margin-bottom: 10px
+		height: 53px
+		display: flex
+		align-items: center
+	&__text
+		line-height: 22px	
+
+// MAKING PAGE
+.making
+	&__youtube
+		max-width: 708px
+		margin: 0 auto 30px
+		img
+			width: 100%
