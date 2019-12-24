@@ -170,5 +170,33 @@ $('.popup-with-zoom-anim').magnificPopup({
 });
 // POPUP END
 
+
+// SHOP CALC START
+
+// const shopMinus = document.getElementsByClassName('s-minus')
+// const shopInput = document.getElementsByClassName('s-input')
+// const	 shopPlus = document.getElementsByClassName('s-plus')
+// let shopSingleSum = document.getElementsByClassName('shop__price-single')
+// const shopAllSum = document.getElementsByClassName('shop__price-sum')
+// const shpEndPice = document.getElementById('endPrice')
+// const shopItems = document.getElementsByClassName('shop__item')
+
+// for(let index = 0; index < shopItems.length; index++) {
+// 	const Item = shopItems[index]
+// 	const inputValue = $(Item).find('.shop__price-single').text()
+// 	console.log(inputValue)
+// 	console.log(shopItems[index])
+
+// $(item).find('.s-plus').addEventListener('click', function{
+// 	alert('hey')
+// })
+// }
+
+
+
+
+
+// SHOP CALC END
+
 }); //END TAG
 
