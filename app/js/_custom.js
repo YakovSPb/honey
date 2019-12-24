@@ -164,36 +164,63 @@ if(inputCalc){
 
 // // POPUP START
 $('.popup-with-zoom-anim').magnificPopup({
-    type: 'inline',
-    closeBtnInside: true,
-    closeMarkup:'<button title="%title%" class="mfp-close">&#10006;</button>',
+	type: 'inline',
+	closeBtnInside: true,
+	closeMarkup:'<button title="%title%" class="mfp-close">&#10006;</button>',
 });
 // POPUP END
 
 
 // SHOP CALC START
+ if (document.querySelector(".shop__price-sum")){
+	const shopItems = document.getElementsByClassName('shop__item')
+	changeAllPrice()
 
-// const shopMinus = document.getElementsByClassName('s-minus')
-// const shopInput = document.getElementsByClassName('s-input')
-// const	 shopPlus = document.getElementsByClassName('s-plus')
-// let shopSingleSum = document.getElementsByClassName('shop__price-single')
-// const shopAllSum = document.getElementsByClassName('shop__price-sum')
-// const shpEndPice = document.getElementById('endPrice')
-// const shopItems = document.getElementsByClassName('shop__item')
+	for(let index = 0; index < shopItems.length; index++) {
+		const Item = shopItems[index]
+		$(Item).find('.s-input').text(500)
 
-// for(let index = 0; index < shopItems.length; index++) {
-// 	const Item = shopItems[index]
-// 	const inputValue = $(Item).find('.shop__price-single').text()
-// 	console.log(inputValue)
-// 	console.log(shopItems[index])
+	}
 
-// $(item).find('.s-plus').addEventListener('click', function{
-// 	alert('hey')
-// })
-// }
+	$('.s-minus').click(function(){
+		let $input = $(this).parent().find('input')
+		let count = parseInt($input.val()) - 1
+		count = count < 1 ? 1 : count
+		$input.val(count)
+		$input.change()
+		changeAllPrice()
+		return false
+	})
+	$('.s-plus').click(function() {
+		let $input = $(this).parent().find('input')
+		$input.val(parseInt($input.val()) + 1)
+		$input.change()
+		changeAllPrice()
+		return false
+	})
 
+	$('.s-input').change(function(){
+		let $input = $(this).parent().find('input')
+		let $singlePrice = $(this).parent().parent().find('.shop__price-single').text()
+		let $priceAllDiv = $(this).parent().parent().find('.shop__price-sum')
+		let $inputVal = +$($input).val()
+		let $newPrice = $singlePrice * $inputVal
+		$($priceAllDiv).text($newPrice)
+		changeAllPrice()
+	})
 
+	function changeAllPrice(){
+		let endPrice = document.getElementById('endPrice')
+		let allPrices = document.getElementsByClassName('shop__price-sum')
+		let myNewPrice = 0
+		for(i = 0; i < allPrices.length; i++){
+			let onePrice = + allPrices[i].innerHTML
+			myNewPrice = myNewPrice + onePrice
+		}
+		endPrice.innerHTML = myNewPrice
+	}
 
+}
 
 
 // SHOP CALC END
